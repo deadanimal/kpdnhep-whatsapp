@@ -1,0 +1,25 @@
+# Django
+**/env
+**/*.pyc
+**/.env
+
+# Angular
+**/node_modules/
+**/dist
+web/Archive.zip
+
+# File structure
+misc
+
+# Deployment
+**/secrets.yml
+
+# Mac OSX Finder files.
+**/.DS_Store
+.DS_Store
+
+# Misc
+bkp
+**/bkp
+server
+script
