@@ -1,0 +1,58 @@
+-- -------------------------------------------------------------
+-- TablePlus 3.12.6(366)
+--
+-- https://tableplus.com/
+--
+-- Database: dbead
+-- Generation Time: 2021-05-19 12:04:16.1930
+-- -------------------------------------------------------------
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+
+DROP TABLE IF EXISTS `laporanhdws`;
+CREATE TABLE `laporanhdws` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `AS_MODDT` datetime DEFAULT NULL,
+  `AS_MODBY` varchar(30) DEFAULT NULL,
+  `AS_CREDT` datetime DEFAULT NULL,
+  `AS_CREBY` varchar(30) DEFAULT NULL,
+  `AS_NI` varchar(100) NOT NULL,
+  `AS_RCVTYP` varchar(10) DEFAULT NULL,
+  `AS_SUMMARY` text,
+  `AS_STATUS` varchar(15) DEFAULT NULL,
+  `AS_COMPLETEDT` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+
+INSERT INTO `laporanhdws` (`id`, `AS_MODDT`, `AS_MODBY`, `AS_CREDT`, `AS_CREBY`, `AS_NI`, `AS_RCVTYP`, `AS_SUMMARY`, `AS_STATUS`, `AS_COMPLETEDT`) VALUES
+(1, '2021-05-08 18:31:59', '49550', '2021-05-08 18:31:59', '49550', 'Tak Nampak aduan', 'S', 'takde aduan dari whatsapp', NULL, NULL),
+(3, '2021-05-08 20:08:29', '49550', '2021-05-08 20:08:29', '49550', 'buat aduan', 'R', 'tak perlu', NULL, NULL),
+(4, '2021-05-08 20:44:35', '49550', '2021-05-08 20:44:35', '49550', 'buat aduan', 'R', 'test', NULL, NULL),
+(5, '2021-05-10 09:35:48', '49550', '2021-05-10 09:35:48', '49550', 'buat aduan', 'T', 's', NULL, NULL),
+(6, '2021-05-10 10:28:29', '49550', '2021-05-10 10:28:29', '49550', 'buat aduan', 'R', 'BB', NULL, NULL),
+(7, '2021-05-10 10:58:33', '49550', '2021-05-10 10:58:33', '49550', 's', 'R', 's', NULL, NULL),
+(8, '2021-05-10 11:38:25', '49550', '2021-05-07 11:38:25', '49550', 'buat aduan', 'R', 's', NULL, NULL),
+(9, '2021-05-10 14:20:20', '49550', '2021-05-10 14:20:20', '49550', 'buat aduan', 'R', 'lagi sekali', NULL, NULL),
+(10, '2021-05-10 14:30:01', '49550', '2021-05-10 14:30:01', '49550', 'buat aduan', 'R', 'ss', NULL, NULL),
+(11, '2021-05-10 14:44:18', '49550', '2021-05-10 14:44:18', '49550', 'ra', 'R', 'ra', NULL, NULL),
+(12, '2021-05-18 19:21:15', '49550', '2021-05-10 17:01:59', '49550', 'buat aduan', 'R', 'b', 'TRUE', NULL),
+(13, '2021-05-18 19:21:06', '49550', '2021-05-11 10:32:26', '49550', 'nak buat aduanz', 'S', 'tak betul', NULL, NULL),
+(14, '2021-05-18 19:19:43', '49550', '2021-05-18 13:36:45', '49550', 'last aduan', 'T', 'bb', 'TRUE', '2021-05-18 13:36:46');
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
