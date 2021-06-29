@@ -1,7 +1,7 @@
 # Django
 **/env
 **/*.pyc
-**/.env
+
 
 # Angular
 **/node_modules/
