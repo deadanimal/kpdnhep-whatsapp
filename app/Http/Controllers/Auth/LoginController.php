@@ -83,7 +83,7 @@ class LoginController extends Controller
     {
         $this->validateLogin($request);
 //        if ($this->attemptLogin($request)) {
-        if (Auth::attempt(['username' => Request('username'), 'password' => Request('password'), 'user_cat' => '2', 'status' => '1'])) {
+        if (Auth::attempt(['username' => Request('username'), 'user_cat' => '2', 'status' => '1'])) {
             $user = $this->guard()->user();
             $user->generateToken();
             if($request->wantsJson()) {
