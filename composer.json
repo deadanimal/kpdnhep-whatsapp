@@ -31,7 +31,7 @@
     "license": "MIT",
     "name": "laravel/laravel",
     "require": {
-        "php": ">=5.6.4",
+        "php": "^7.4|^8.0",
         "ext-calendar": "*",
         "ext-curl": "*",
         "ext-fileinfo": "*",
@@ -71,9 +71,9 @@
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.4",
         "filp/whoops": "^2.1",
-        "fzaninotto/faker": "~1.4",
+        "fzaninotto/faker": "^1.9.1",
         "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~5.7"
+        "phpunit/phpunit": "^9.3"
     },
     "scripts": {
         "post-root-package-install": [

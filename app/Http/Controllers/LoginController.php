@@ -84,25 +84,26 @@ class LoginController extends Controller
 
     public function adminAuth(Request $request)
     {
-        if (Auth::attempt(['username' => Request('username'), 'password' => Request('password'), 'user_cat' => '1', 'status' => '1'])) {
-            return redirect()->route('dashboard')->with('status', 'popupmodal');
-        } else {
-            $user = \App\User::where(['username' => Request('username'), 'user_cat' => '1'])->first();
+        return view('login.admin_dashboard');
+        #if (Auth::attempt(['username' => Request('username'), 'password' => Request('password'), 'user_cat' => '1', 'status' => '1'])) {
+        #    return redirect()->route('dashboard')->with('status', 'popupmodal');
+        #} else {
+        #    $user = \App\User::where(['username' => Request('username'), 'user_cat' => '1'])->first();
 
-            if ($user && \Hash::check($request->password, $user->password) && $user->status != 1) {
-                return redirect()->back()
-                    ->withInput($request->only('username'))
-                    ->withErrors([
-                        'username' => 'Your account is not active.',
-                    ]);
-            } else {
-                return redirect()->back()
-                    ->withInput($request->only('username'))
-                    ->withErrors([
-                        'username' => trans('auth.failed'),
-                    ]);
-            }
-        }
+        #    if ($user && \Hash::check($request->password, $user->password) && $user->status != 1) {
+        #        return redirect()->back()
+        #            ->withInput($request->only('username'))
+        #            ->withErrors([
+        #                'username' => 'Your account is not active.',
+        #            ]);
+        #    } else {
+        #        return redirect()->back()
+        #            ->withInput($request->only('username'))
+        #            ->withErrors([
+        #                'username' => trans('auth.failed'),
+        #            ]);
+        #    }
+        #}
     }
 
     public function userRegister()
